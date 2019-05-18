@@ -30,7 +30,7 @@ class VentureCapitalist
   end
 
   def find_info
-    FundingRound.all.select {|round|round.vc == self}
+    FundingRound.all.select {|round|round.venture_capitalist == self}
   end
 
   def funding_rounds
@@ -44,8 +44,8 @@ class VentureCapitalist
       else
       startups << round.startup
       end
-    startups
     end
+    startups
   end
 
   def biggest_investment

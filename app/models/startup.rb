@@ -39,9 +39,9 @@ class Startup
   def investors
     all_investors = []
     find_info.each do |round|
-      if all_investors.include?(round.vc)
+      if all_investors.include?(round.venture_capitalist)
       else
-      all_investors << round.vc
+      all_investors << round.venture_capitalist
       end
     end
     all_investors
